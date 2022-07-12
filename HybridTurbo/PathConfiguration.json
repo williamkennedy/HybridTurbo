@@ -1,0 +1,20 @@
+{
+  "rules": [
+    {
+      "patterns": [
+        "/new$"
+      ],
+      "properties": {
+        "presentation": "modal"
+      }
+    },
+    {
+      "patterns": [
+        "/numbers"
+      ],
+      "properties": {
+        "controller": "numbers"
+      }
+    }
+  ]
+}

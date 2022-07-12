@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE37F1CA287DCAC200B4E4C2 /* PathConfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = FE37F1C9287DCAC200B4E4C2 /* PathConfiguration.json */; };
 		FEEAA88D287C675100DBE773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEAA88C287C675100DBE773 /* AppDelegate.swift */; };
 		FEEAA88F287C675100DBE773 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEAA88E287C675100DBE773 /* SceneDelegate.swift */; };
 		FEEAA891287C675100DBE773 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEAA890287C675100DBE773 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 		FEEAA8A4287C675200DBE773 /* HybridTurboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEAA8A3287C675200DBE773 /* HybridTurboTests.swift */; };
 		FEEAA8AE287C675200DBE773 /* HybridTurboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEAA8AD287C675200DBE773 /* HybridTurboUITests.swift */; };
 		FEEAA8B0287C675200DBE773 /* HybridTurboUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEAA8AF287C675200DBE773 /* HybridTurboUITestsLaunchTests.swift */; };
+		FEEAA8BE287C679600DBE773 /* Turbo in Frameworks */ = {isa = PBXBuildFile; productRef = FEEAA8BD287C679600DBE773 /* Turbo */; };
+		FEEAA8C2287DBBE400DBE773 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEAA8C1287DBBE400DBE773 /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE37F1C9287DCAC200B4E4C2 /* PathConfiguration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = PathConfiguration.json; path = HybridTurbo/PathConfiguration.json; sourceTree = SOURCE_ROOT; };
 		FEEAA889287C675100DBE773 /* HybridTurbo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HybridTurbo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEAA88C287C675100DBE773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEEAA88E287C675100DBE773 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +53,7 @@
 		FEEAA8A9287C675200DBE773 /* HybridTurboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HybridTurboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEAA8AD287C675200DBE773 /* HybridTurboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridTurboUITests.swift; sourceTree = "<group>"; };
 		FEEAA8AF287C675200DBE773 /* HybridTurboUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HybridTurboUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FEEAA8C1287DBBE400DBE773 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEEAA8BE287C679600DBE773 /* Turbo in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,8 +105,9 @@
 		FEEAA88B287C675100DBE773 /* HybridTurbo */ = {
 			isa = PBXGroup;
 			children = (
-				FEEAA88C287C675100DBE773 /* AppDelegate.swift */,
-				FEEAA88E287C675100DBE773 /* SceneDelegate.swift */,
+				FEF5CCE2287DC72E00C966CE /* Resources */,
+				FEEAA8BF287DBB6600DBE773 /* Coordinators */,
+				FEEAA8C0287DBB7500DBE773 /* Delegates */,
 				FEEAA890287C675100DBE773 /* ViewController.swift */,
 				FEEAA892287C675100DBE773 /* Main.storyboard */,
 				FEEAA895287C675200DBE773 /* Assets.xcassets */,
@@ -127,6 +134,31 @@
 			path = HybridTurboUITests;
 			sourceTree = "<group>";
 		};
+		FEEAA8BF287DBB6600DBE773 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				FEEAA8C1287DBBE400DBE773 /* AppCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		FEEAA8C0287DBB7500DBE773 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				FEEAA88C287C675100DBE773 /* AppDelegate.swift */,
+				FEEAA88E287C675100DBE773 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		FEF5CCE2287DC72E00C966CE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				FE37F1C9287DCAC200B4E4C2 /* PathConfiguration.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +175,9 @@
 			dependencies = (
 			);
 			name = HybridTurbo;
+			packageProductDependencies = (
+				FEEAA8BD287C679600DBE773 /* Turbo */,
+			);
 			productName = HybridTurbo;
 			productReference = FEEAA889287C675100DBE773 /* HybridTurbo.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +250,9 @@
 				Base,
 			);
 			mainGroup = FEEAA880287C675100DBE773;
+			packageReferences = (
+				FEEAA8BC287C679600DBE773 /* XCRemoteSwiftPackageReference "turbo-ios" */,
+			);
 			productRefGroup = FEEAA88A287C675100DBE773 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -234,6 +272,7 @@
 				FEEAA899287C675200DBE773 /* LaunchScreen.storyboard in Resources */,
 				FEEAA896287C675200DBE773 /* Assets.xcassets in Resources */,
 				FEEAA894287C675100DBE773 /* Main.storyboard in Resources */,
+				FE37F1CA287DCAC200B4E4C2 /* PathConfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEEAA8C2287DBBE400DBE773 /* AppCoordinator.swift in Sources */,
 				FEEAA891287C675100DBE773 /* ViewController.swift in Sources */,
 				FEEAA88D287C675100DBE773 /* AppDelegate.swift in Sources */,
 				FEEAA88F287C675100DBE773 /* SceneDelegate.swift in Sources */,
@@ -598,6 +638,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FEEAA8BC287C679600DBE773 /* XCRemoteSwiftPackageReference "turbo-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hotwired/turbo-ios";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FEEAA8BD287C679600DBE773 /* Turbo */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FEEAA8BC287C679600DBE773 /* XCRemoteSwiftPackageReference "turbo-ios" */;
+			productName = Turbo;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FEEAA881287C675100DBE773 /* Project object */;
 }
