@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FE37F1CA287DCAC200B4E4C2 /* PathConfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = FE37F1C9287DCAC200B4E4C2 /* PathConfiguration.json */; };
+		FE848F46287F006D002AC815 /* NumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE848F45287F006D002AC815 /* NumbersViewController.swift */; };
+		FE848F49287F0673002AC815 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE848F48287F0673002AC815 /* ErrorView.swift */; };
 		FEEAA88D287C675100DBE773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEAA88C287C675100DBE773 /* AppDelegate.swift */; };
 		FEEAA88F287C675100DBE773 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEAA88E287C675100DBE773 /* SceneDelegate.swift */; };
 		FEEAA891287C675100DBE773 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEAA890287C675100DBE773 /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		FE37F1C9287DCAC200B4E4C2 /* PathConfiguration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = PathConfiguration.json; path = HybridTurbo/PathConfiguration.json; sourceTree = SOURCE_ROOT; };
+		FE848F45287F006D002AC815 /* NumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersViewController.swift; sourceTree = "<group>"; };
+		FE848F48287F0673002AC815 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		FEEAA889287C675100DBE773 /* HybridTurbo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HybridTurbo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEAA88C287C675100DBE773 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEEAA88E287C675100DBE773 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +86,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE848F44287F0040002AC815 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FE848F45287F006D002AC815 /* NumbersViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FE848F47287F0662002AC815 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FE848F48287F0673002AC815 /* ErrorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		FEEAA880287C675100DBE773 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +125,8 @@
 		FEEAA88B287C675100DBE773 /* HybridTurbo */ = {
 			isa = PBXGroup;
 			children = (
+				FE848F47287F0662002AC815 /* Views */,
+				FE848F44287F0040002AC815 /* View Controllers */,
 				FEF5CCE2287DC72E00C966CE /* Resources */,
 				FEEAA8BF287DBB6600DBE773 /* Coordinators */,
 				FEEAA8C0287DBB7500DBE773 /* Delegates */,
@@ -298,6 +320,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEEAA8C2287DBBE400DBE773 /* AppCoordinator.swift in Sources */,
+				FE848F49287F0673002AC815 /* ErrorView.swift in Sources */,
+				FE848F46287F006D002AC815 /* NumbersViewController.swift in Sources */,
 				FEEAA891287C675100DBE773 /* ViewController.swift in Sources */,
 				FEEAA88D287C675100DBE773 /* AppDelegate.swift in Sources */,
 				FEEAA88F287C675100DBE773 /* SceneDelegate.swift in Sources */,

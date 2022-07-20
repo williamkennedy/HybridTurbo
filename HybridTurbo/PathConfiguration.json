@@ -2,7 +2,8 @@
   "rules": [
     {
       "patterns": [
-        "/new$"
+        "/new$",
+        "/edit$"
       ],
       "properties": {
         "presentation": "modal"
