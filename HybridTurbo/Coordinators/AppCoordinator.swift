@@ -14,12 +14,15 @@ class AppCoordinator: NSObject {
 
     // MARK: Private
 
-    private let navigationController = UINavigationController()
+    private let navigationController = ApplicationViewController()
     private lazy var session = makeSession()
     private lazy var modalSession = makeSession()
 
     private func makeSession() -> Session {
-        let session = Session()
+        let configuration = WKWebViewConfiguration()
+        let scriptMessageHandler = ScriptMessageHandler()
+        configuration.userContentController.add(scriptMessageHandler, name: "nativeApp")
+        let session = Session(webViewConfiguration: configuration)
         session.delegate = self
         session.pathConfiguration = PathConfiguration(sources: [
             .file(Bundle.main.url(forResource: "PathConfiguration", withExtension: "json")!),
@@ -43,7 +46,7 @@ class AppCoordinator: NSObject {
         return VisitableViewController(url: url)
     }
 
-    private func navigate(to viewController: UIViewController, via action: VisitAction, asModal modal: Bool) {
+    func navigate(to viewController: UIViewController, via action: VisitAction, asModal modal: Bool) {
         if modal {
             navigationController.present(viewController, animated: true)
         } else if action == .advance {
