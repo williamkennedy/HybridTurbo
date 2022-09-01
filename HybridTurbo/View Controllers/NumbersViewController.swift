@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 
-class NumbersViewController: UIHostingController<NumbersView> {
+class NumbersViewController: UIHostingController<NumbersView>, Storyboardable {
     init() {
         super.init(rootView: NumbersView())
     }

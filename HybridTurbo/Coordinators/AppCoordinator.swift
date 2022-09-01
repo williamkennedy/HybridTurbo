@@ -29,6 +29,7 @@ class AppCoordinator: NSObject {
 
     private func visit(url: URL, action: VisitAction = .advance, properties: PathProperties = [:]) {
         let viewController = makeViewController(for: url, from: properties)
+        
         let modal = properties["presentation"] as? String == "modal"
         let action: VisitAction = url ==
           session.topmostVisitable?.visitableURL ? .replace : action

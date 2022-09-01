@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		FE37F1CA287DCAC200B4E4C2 /* PathConfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = FE37F1C9287DCAC200B4E4C2 /* PathConfiguration.json */; };
+		FE4BEF4B28C1318F00774187 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4BEF4A28C1318F00774187 /* Coordinator.swift */; };
+		FE4BEF4D28C1324E00774187 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4BEF4C28C1324E00774187 /* ApplicationCoordinator.swift */; };
+		FE4BEF5028C1336300774187 /* Storyboardable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4BEF4F28C1336300774187 /* Storyboardable.swift */; };
 		FE848F46287F006D002AC815 /* NumbersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE848F45287F006D002AC815 /* NumbersViewController.swift */; };
 		FE848F49287F0673002AC815 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE848F48287F0673002AC815 /* ErrorView.swift */; };
 		FEEAA88D287C675100DBE773 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEAA88C287C675100DBE773 /* AppDelegate.swift */; };
@@ -42,6 +45,9 @@
 
 /* Begin PBXFileReference section */
 		FE37F1C9287DCAC200B4E4C2 /* PathConfiguration.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = PathConfiguration.json; path = HybridTurbo/PathConfiguration.json; sourceTree = SOURCE_ROOT; };
+		FE4BEF4A28C1318F00774187 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		FE4BEF4C28C1324E00774187 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
+		FE4BEF4F28C1336300774187 /* Storyboardable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboardable.swift; sourceTree = "<group>"; };
 		FE848F45287F006D002AC815 /* NumbersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumbersViewController.swift; sourceTree = "<group>"; };
 		FE848F48287F0673002AC815 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		FEEAA889287C675100DBE773 /* HybridTurbo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HybridTurbo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,6 +92,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE4BEF4E28C1335200774187 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FE4BEF4F28C1336300774187 /* Storyboardable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		FE848F44287F0040002AC815 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +139,7 @@
 		FEEAA88B287C675100DBE773 /* HybridTurbo */ = {
 			isa = PBXGroup;
 			children = (
+				FE4BEF4E28C1335200774187 /* Protocols */,
 				FE848F47287F0662002AC815 /* Views */,
 				FE848F44287F0040002AC815 /* View Controllers */,
 				FEF5CCE2287DC72E00C966CE /* Resources */,
@@ -160,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				FEEAA8C1287DBBE400DBE773 /* AppCoordinator.swift */,
+				FE4BEF4A28C1318F00774187 /* Coordinator.swift */,
+				FE4BEF4C28C1324E00774187 /* ApplicationCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -325,6 +342,9 @@
 				FEEAA891287C675100DBE773 /* ViewController.swift in Sources */,
 				FEEAA88D287C675100DBE773 /* AppDelegate.swift in Sources */,
 				FEEAA88F287C675100DBE773 /* SceneDelegate.swift in Sources */,
+				FE4BEF4B28C1318F00774187 /* Coordinator.swift in Sources */,
+				FE4BEF5028C1336300774187 /* Storyboardable.swift in Sources */,
+				FE4BEF4D28C1324E00774187 /* ApplicationCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
