@@ -18,7 +18,24 @@ class ApplicationCoordinator: Coordinator {
     override init() {
         super.init()
 
-        
+        let numbersCoordinator = NumbersCoordinator()
+
+        let turboCoordinator = TurboCoordinator()
+
+        tabBarController.viewControllers = [
+            numbersCoordinator.rootViewController,
+            turboCoordinator.rootViewController
+        ]
+
+        childCoordinators.append(numbersCoordinator)
+        childCoordinators.append(turboCoordinator)
+
+    }
+
+    override func start() {
+        childCoordinators.forEach { (childCoordinator) in
+            childCoordinator.start()
+        }
     }
 
 }

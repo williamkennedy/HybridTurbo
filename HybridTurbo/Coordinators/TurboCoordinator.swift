@@ -4,11 +4,22 @@ import Turbo
 import UIKit
 import WebKit
 
-class AppCoordinator: NSObject {
-    var rootViewController: UIViewController { navigationController }
+class TurboCoordinator: Coordinator {
+    var rootViewController: UIViewController {
+        navigationController.tabBarItem = tab()
+        return navigationController
+
+    }
     var resetApp: (() -> Void)?
 
-    func start() {
+    func tab() -> UITabBarItem {
+        let item = UITabBarItem()
+        item.title = "Turbo"
+        item.image = UIImage(systemName: "tram")
+        return item
+    }
+
+    override func start() {
         visit(url: URL(string: "http://localhost:3000/")!)
     }
 
@@ -41,7 +52,7 @@ class AppCoordinator: NSObject {
         if properties["controller"] as? String == "numbers" {
             return NumbersViewController()
         }
-        return VisitableViewController(url: url)
+        return CustomVisitableViewController(url: url)
     }
 
     private func navigate(to viewController: UIViewController, via action: VisitAction, asModal modal: Bool) {
@@ -66,7 +77,7 @@ class AppCoordinator: NSObject {
     }
 }
 
-extension AppCoordinator: WKNavigationDelegate {
+extension TurboCoordinator: WKNavigationDelegate {
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         guard
             navigationAction.navigationType == .linkActivated,
@@ -82,7 +93,7 @@ extension AppCoordinator: WKNavigationDelegate {
     }
 }
 
-extension AppCoordinator: SessionDelegate {
+extension TurboCoordinator: SessionDelegate {
     func sessionWebViewProcessDidTerminate(_ session: Session) {
         resetApp?()
     }

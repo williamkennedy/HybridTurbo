@@ -8,7 +8,7 @@
 import SwiftUI
 import UIKit
 
-class NumbersViewController: UIHostingController<NumbersView>, Storyboardable {
+class NumbersViewController: UIHostingController<NumbersView> {
     init() {
         super.init(rootView: NumbersView())
     }
@@ -19,13 +19,23 @@ class NumbersViewController: UIHostingController<NumbersView>, Storyboardable {
 }
 
 struct NumbersView: View {
-    private let numbers = 1 ... 10
+    @State private var checkAmount = 0.0
+    @State private var numberOfPeople = 0
 
     var body: some View {
-        List(numbers, id: \.self) { number in
-            Text(String(number))
+        NavigationView {
+            Form {
+                Section {
+  
+                    Picker("Number of people", selection: $numberOfPeople) {
+                        ForEach(2 ..< 100) {
+                            Text("\($0) people")
+                        }
+                    }
+                }
+            }
+            .navigationTitle("Hello")
         }
-        .navigationTitle("Hello")
     }
 }
 
